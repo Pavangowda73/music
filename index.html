@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Music Website</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #CCFFFF;
+            color: #333;
+        }
+
+        header {
+            background-color:    #6699ff;
+            color: #fff;
+            padding: 45px;
+            text-align: center;
+            font-size: 24px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px #000000;;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 12px;
+            text-align: right;
+        }
+
+        nav a {
+            color:#6699ff ;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            background:#fff;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around; /* Align songs horizontally */
+            
+        }
+
+        .song {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+           
+        }
+
+        .song:hover {
+            transform: translateY(-5px);
+            box-shadow:  5px 5px 4px 5px #6699ff;
+        }
+
+        .song h2 {
+            margin-top: 0;
+            font-size: 10px; /* Decrease font size for song title */
+            color: #333;
+        }
+
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Adjust image size */
+        .song img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            max-width: 100%; /* Ensure image takes full width */
+            max-height: 200px; /* Increase the maximum height of the image */
+        }
+        #fixedScriptTag {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: blue;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Fix audio controls position */
+        #audioPlayer {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            padding:15px;
+            transform: translateX(-50%);
+            background-color:#6699ff ;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        My Music Website
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="container">
+        <div class="song" data-audio="song1.1.mp3">
+            <img src="image1.1.jpg" alt="Song 1 Photo">
+            <h2>Ekadanta</h2>
+        </div>
+        <div class="song" data-audio="song2.mp3">
+            <img src="image2.jpg" alt="Song 1 Photo">
+            <h2> Brahmanda Bhandamula</h2>
+        </div>
+        <div class="song" data-audio="song3.mp3">
+            <img src="image2.jpg" alt="Song 1 Photo">
+            <h2> Akhilanda Koti</h2>
+        </div>
+        <div class="song" data-audio="song4.mp3">
+            <img src="image2.jpg" alt="Song 1 Photo">
+            <h2> Brahmothsava</h2>
+        </div>
+        <div class="song" data-audio="song5.mp3">
+            <img src="image2.jpg" alt="Song 1 Photo">
+            <h2>Govindha Hari Govindha</h2>
+        </div>
+        <div class="song" data-audio="song3.mp3">
+            <img src="image1.jpg" alt="Song 1 Photo">
+            <h2>nothing</h2>
+        </div>    
+        <div class="song" data-audio="song7.mp3">
+            <img src="image.jpg" alt="Song 1 Photo">
+            <h2>theme of chakravyuha</h2>
+        </div>
+        <div class="song" data-audio="song8.mp3">
+            <img src="image.jpg" alt="Song 1 Photo">
+            <h2>geleya geleya</h2>
+        </div>
+        <div class="song" data-audio="song9.mp3">
+            <img src="image9.png" alt="Song 1 Photo">
+            <h2> Natasaarvabhowma Title Track</h2>
+        </div>
+        <div class="song" data-audio="song10.mp3">
+            <img src="image9.png" alt="Song 1 Photo">
+            <h2>yaro nanu</h2>
+        </div>
+        <div class="song" data-audio="song11.mp3">
+            <img src="image9.png" alt="Song 1 Photo">
+            <h2> Open The Bottle</h2>
+        </div>
+        <div class="song" data-audio="song12.mp3">
+            <img src="image12.png" alt="Song 1 Photo">
+            <h2> Feel The Power</h2>
+        </div>
+        <div class="song" data-audio="song13.mp3">
+            <img src="image13.png" alt="Song 1 Photo">
+            <h2> Power Of Youth</h2>
+        </div>
+        <div class="song" data-audio="song14.mp3">
+            <img src="image14.png" alt="Song 1 Photo">
+            <h2> Neenaade Naa</h2>
+        </div>
+        <div class="song" data-audio="song15.mp3">
+            <img src="image15.png" alt="Song 1 Photo">
+            <h2>nannavale</h2>
+        </div>
+        <div class="song" data-audio="song3.mp3">
+            <img src="image1.jpg" alt="Song 1 Photo">
+            <h2>Song Title 3</h2>
+        </div>
+        <div class="song" data-audio="song3.mp3">
+            <img src="image1.jpg" alt="Song 1 Photo">
+            <h2>Song Title 3</h2>
+        </div>
+        <div class="song" data-audio="song3.mp3">
+            <img src="image1.jpg" alt="Song 1 Photo">
+            <h2>Song Title 3</h2>
+        </div>
+
+        <!-- Add more songs here -->
+    </div>
+
+    <!-- Audio element for playing the selected song -->
+    <audio id="audioPlayer" controls>
+        Your browser does not support the audio element.
+    </audio>
+
+    
+    
+    <script id="fixedScriptTag">
+        document.addEventListener('DOMContentLoaded', function() {
+            const songs = document.querySelectorAll('.song');
+            const audioPlayer = document.getElementById('audioPlayer');
+
+            songs.forEach(function(song) {
+                song.addEventListener('click', function() {
+                    const audioPath = this.getAttribute('data-audio');
+                    audioPlayer.src = audioPath;
+                    audioPlayer.play();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
